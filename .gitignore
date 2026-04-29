@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# PyTorch
+*.pth
+!model_cnn_fold1.pth
+!model_cnn_fold2.pth
+!model_cnn_fold4.pth
+!web_app/model_best.pth
+
+# Archived models (not needed in repo)
+archived_models/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Data files (keep CSV structure but not large files)
+digit-recognizer/*.csv
+!digit-recognizer/sample_submission.csv
+
+# Kaggle
+kaggle.json
+
+# Temporary files
+*.tmp
+temp/
+tmp/
