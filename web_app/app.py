@@ -221,7 +221,7 @@ def make_result_html(digit, conf, top3):
 
 # ============== Gradio 界面 ==============
 
-custom_css = """
+custom_css = r"""
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 :root, .dark, .gradio-container, .gradio-container.dark {
@@ -422,7 +422,7 @@ def predict_sketch_wrapper(canvas):
 
 # ============== 构建界面 ==============
 
-with gr.Blocks(title="手写数字识别系统", theme=gr.themes.Default(font=[gr.themes.GoogleFont("Inter"), "sans-serif"])) as app:
+with gr.Blocks(title="手写数字识别系统") as app:
     gr.Markdown("""
     <div style="padding: 3rem 0 2rem 0;">
         <h1>手写数字识别</h1>
@@ -494,5 +494,6 @@ if __name__ == "__main__":
         server_port=7860,
         share=False,
         show_error=True,
-        css=custom_css
+        css=custom_css,
+        theme=gr.themes.Default(font=[gr.themes.GoogleFont("Inter"), "sans-serif"])
     )
